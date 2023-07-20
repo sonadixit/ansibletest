@@ -1,0 +1,5 @@
+---
+# vars file for ansibletask1-role
+node_env: "stage"
+grafana_version_stage: "8.2.2"
+grafana_version_prod: "8.3.0"

@@ -1,0 +1,17 @@
+---
+# tasks/grafana.yml
+- name: Install Grafana
+  package:
+    name: grafana
+    state: present
+
+- name: Configure Grafana data source
+  template:
+    src: grafana_datasource.yml.j2
+    dest: /etc/grafana/datasource.yml
+
+- name: Start Grafana service
+  service:
+    name: grafana-server
+    state: started
+    enabled: yes

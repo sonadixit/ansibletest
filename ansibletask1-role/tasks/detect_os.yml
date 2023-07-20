@@ -1,0 +1,4 @@
+---
+- name: Detect OS Flavor
+  set_fact:
+    os_flavor: "{{ ansible_distribution | lower }}"

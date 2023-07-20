@@ -1,0 +1,5 @@
+---
+# tasks file for ansibletask1-role
+- name: Install Grafana
+  include_tasks: grafana.yml
+  tags: grafana

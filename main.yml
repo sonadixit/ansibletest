@@ -1,0 +1,13 @@
+---
+- name: Deploy and Configure Prometheus, Grafana, Alertmanager, Nginx, and Node Exporter
+  hosts: all
+  gather_facts: true
+  tasks:
+    - name: Detect OS Flavor
+      include_tasks: detect_os.yml
+      register: os_flavor
+
+ 
+
+    - name: Include OS-specific Playbook
+      include_playbook: "{{ os_flavor.stdout }}.yml"

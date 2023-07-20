@@ -6,4 +6,4 @@
     grafana_version_ubuntu: "{{ grafana_version_stage }}"   
     grafana_version_ubuntu: "{{ grafana_version_prod }}"    
   roles:
-    - prometheus-role
+    - ansibletask1-role

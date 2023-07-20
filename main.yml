@@ -1,6 +1,6 @@
 ---
 - name: Deploy and Configure Prometheus, Grafana, Alertmanager, Nginx, and Node Exporter
-  hosts: all
+  hosts: localhost
   gather_facts: true
   tasks:
     - name: Detect OS Flavor

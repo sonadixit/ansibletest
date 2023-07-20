@@ -1,0 +1,9 @@
+---
+- name: Deploy and Configure Prometheus, Grafana, Alertmanager, Nginx, and Node Exporter on Ubuntu
+  hosts: localhost
+  become: true
+  vars:
+    grafana_version_ubuntu: "{{ grafana_version_stage }}"   
+    grafana_version_ubuntu: "{{ grafana_version_prod }}"    
+  roles:
+    - prometheus-role
